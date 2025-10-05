@@ -51,10 +51,12 @@ a:hover {
 
 .logo {
     font-size: 2rem;
+    box-shadow:0px 1px 0px rgb(167, 165, 165);
 }
 
 .logo:hover {
     cursor: default;
+    
 }
 
 /* Hamburger Nav */
@@ -155,7 +157,8 @@ section {
     display: flex;
     height: 400px;
     width: 400px;
-    margin: auto 0;
+    position:relative;
+    top:30px;
 }
 
 .section__text {
@@ -229,6 +232,7 @@ section {
     cursor: pointer;
     background: rgb(0, 0, 0);
 }
+
 
 /* About Section */
 #about {
@@ -379,4 +383,213 @@ footer p {
     text-align: center;
 }
 
-/* Add more CSS here for the remaining sections and fine-tuning */
+/* animations  */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Nav Animation */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav .logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    animation: fadeInDown 1s ease forwards;
+}
+
+/* Nav Links Hover */
+.nav-links li a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+    transform: translateY(-3px);
+}
+
+/* Hamburger Menu Animation */
+.hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #333;
+    transition: all 0.4s ease;
+}
+
+#menu-toggle:checked + .hamburger-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+#menu-toggle:checked ~ .menu-links {
+    max-height: 300px;
+}
+
+/* Section Animations */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+section:nth-of-type(1) {
+    animation-delay: 0.3s;
+}
+section:nth-of-type(2) {
+    animation-delay: 0.6s;
+}
+section:nth-of-type(3) {
+    animation-delay: 0.9s;
+}
+section:nth-of-type(4) {
+    animation-delay: 1.2s;
+}
+
+/* Profile Section */
+.section__pic-container img {
+    animation: scaleIn 1s ease forwards;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+/* Social Icons */
+#socials-container .icon {
+    width: 35px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#socials-container .icon:hover {
+    transform: scale(1.2);
+}
+
+/* Arrow Animations */
+.icon.arrow {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: bounce 2s infinite;
+}
+
+.icon.arrow:hover {
+    transform: translateY(-5px);
+}
+
+/* Project Images Hover */
+.project-img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+}
+
+.project-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Contact Hover Effects */
+.contact-info-container a:hover {
+    color: #007bff;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+/* Footer Links Hover */
+footer .nav-links li a:hover {
+    color: #007bff;
+}
+
+/* Animations Keyframes */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
