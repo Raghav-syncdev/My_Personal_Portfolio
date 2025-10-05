@@ -1,4 +1,4 @@
-/* General */
+
 * {
     margin: 0;
     padding: 0;
@@ -91,7 +91,7 @@ a:hover {
     right: 0;
     background-color: white;
     width: fit-content;
-    max-height: 0; /* Hidden by default */
+    max-height: 0; 
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -115,7 +115,7 @@ a:hover {
     padding: 1rem;
 }
 
-/* CSS-only toggle behavior */
+
 #menu-toggle:checked + .hamburger-icon span:first-child {
     transform: rotate(45deg) translate(10px, 5px);
 }
@@ -385,7 +385,7 @@ footer p {
 
 /* animations  */
 
-/* General Styles */
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -533,14 +533,14 @@ section:nth-of-type(4) {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Contact Hover Effects */
+
 .contact-info-container a:hover {
     color: #007bff;
     transform: translateX(5px);
     transition: all 0.3s ease;
 }
 
-/* Footer Links Hover */
+
 footer .nav-links li a:hover {
     color: #007bff;
 }
