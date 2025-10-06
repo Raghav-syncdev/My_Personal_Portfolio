@@ -26,7 +26,7 @@ a, .btn {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    height: 12vh;
 }
 
 .nav-links {
@@ -61,7 +61,8 @@ a:hover {
 
 /* Hamburger Nav */
 #hamburger-nav {
-    display: none; /* Hidden on desktop */
+    display: none;
+     /* Hidden on desktop */
 }
 
 .hamburger-menu {
